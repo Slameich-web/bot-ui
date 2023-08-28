@@ -36,6 +36,7 @@ export const Login = () => {
       <div className="auth_container">
         <form className="input_container">
           <TextField
+            className="input_color"
             label="Email"
             style={{ marginTop: "8px" }}
             variant="outlined"
@@ -43,6 +44,7 @@ export const Login = () => {
             placeholder="Email"
           />
           <TextField
+            className="input_color"
             label="Пароль"
             style={{ marginTop: "8px" }}
             variant="outlined"

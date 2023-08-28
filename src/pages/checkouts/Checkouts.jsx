@@ -37,7 +37,6 @@ export const Checkouts = () => {
                 to={"/revenue"}
                 style={{
                   width: "100%",
-                  height: "60%",
                   display: "flex",
                   justifyContent: "center",
                   textDecoration: "none",

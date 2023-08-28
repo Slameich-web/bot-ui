@@ -46,6 +46,7 @@ export const Register = () => {
           action="users/id"
         >
           <TextField
+            className="input_color"
             label="Email"
             style={{ marginTop: "8px" }}
             variant="outlined"
@@ -55,6 +56,7 @@ export const Register = () => {
           />
 
           <TextField
+            className="input_color"
             label="Имя"
             style={{ marginTop: "8px" }}
             variant="outlined"
@@ -62,6 +64,7 @@ export const Register = () => {
             placeholder="Имя"
           />
           <TextField
+            className="input_color"
             style={{ marginTop: "8px" }}
             label="Фамилия"
             variant="outlined"
@@ -69,6 +72,7 @@ export const Register = () => {
             placeholder="Фамилия"
           />
           <TextField
+            className="input_color"
             label="Отчество"
             style={{ marginTop: "8px" }}
             variant="outlined"
@@ -76,6 +80,7 @@ export const Register = () => {
             placeholder="Отчество"
           />
           <TextField
+            className="input_color"
             label="Пароль"
             style={{ marginTop: "8px" }}
             variant="outlined"
