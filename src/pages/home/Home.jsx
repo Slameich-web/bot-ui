@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { $api } from "../../http/index";
-import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
@@ -19,30 +18,12 @@ export const Home = () => {
   return (
     <div className="auth_wrapper">
       <div className="nav_container">
-        <animated.div className="buttons">
-          <Link
-            to={"/revenue"}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              textDecoration: "none",
-              color: "var(--tg-theme-button-text-color)",
-            }}
-          >
-            <animated.button>Доход</animated.button>
-          </Link>
-          <Link
-            to={"/checkouts"}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              textDecoration: "none",
-              color: "var(--tg-theme-button-text-color)",
-            }}
-          >
-            <animated.button>Запросить выплату</animated.button>
-          </Link>
-        </animated.div>
+        <Link to={"/revenue"}>
+          <button>Доход</button>
+        </Link>
+        <Link to={"/checkouts"}>
+          <button>Запросить выплату</button>
+        </Link>
       </div>
     </div>
   );
