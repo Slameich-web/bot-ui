@@ -37,7 +37,7 @@ export const Revenue = () => {
               <animated.span style={style}>Введите сумму вывода:</animated.span>
               <TextField
                 label="Email"
-                style={{ marginTop: "8px" }}
+                style={{ marginBottom: "16px" }}
                 variant="outlined"
                 className="modal_input"
               />
