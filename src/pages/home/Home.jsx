@@ -19,10 +19,10 @@ export const Home = () => {
   return (
     <div className="auth_wrapper">
       <div className="nav_container">
-        <Link to={"/revenue"}>
+        <Link className="buttons" to={"/revenue"}>
           <button>Доход</button>
         </Link>
-        <Link to={"/checkouts"}>
+        <Link className="buttons" to={"/checkouts"}>
           <button>Запросить выплату</button>
         </Link>
       </div>
