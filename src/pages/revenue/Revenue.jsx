@@ -43,16 +43,7 @@ export const Revenue = () => {
                 onChange={(e) => setModalInputValue(e.target.value)}
                 className="modal_input"
               />
-              <button
-                className={
-                  modalInputValue !== 0 || ""
-                    ? "modal_button_active"
-                    : "modal_button_inactive"
-                }
-                style={style}
-              >
-                Доступно к выводу
-              </button>
+              <span style={style}>Доступно к выводу: 321</span>
               <button className="modal_button_active" style={style}>
                 Запросить выплату
               </button>
