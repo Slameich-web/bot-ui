@@ -24,42 +24,36 @@ export const Home = () => {
   return (
     <div className="auth_wrapper">
       <div className="nav_container">
-        {transition((style, item) =>
-          item ? (
-            <animated.div style={style} className="buttons">
-              <Link
-                to={"/revenue"}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                  color: "var(--tg-theme-button-text-color)",
-                }}
-              >
-                <animated.button style={style}>Доход</animated.button>
-              </Link>
-              <Link
-                to={"/checkouts"}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                  color: "var(--tg-theme-button-text-color)",
-                }}
-              >
-                <animated.button style={style}>
-                  Запросить выплату
-                </animated.button>
-              </Link>
-            </animated.div>
-          ) : (
-            ""
-          )
-        )}
+        {transition((style) => (
+          <animated.div style={style} className="buttons">
+            <Link
+              to={"/revenue"}
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                textDecoration: "none",
+                color: "var(--tg-theme-button-text-color)",
+              }}
+            >
+              <animated.button style={style}>Доход</animated.button>
+            </Link>
+            <Link
+              to={"/checkouts"}
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                justifyContent: "center",
+                textDecoration: "none",
+                color: "var(--tg-theme-button-text-color)",
+              }}
+            >
+              <animated.button style={style}>Запросить выплату</animated.button>
+            </Link>
+          </animated.div>
+        ))}
       </div>
     </div>
   );
