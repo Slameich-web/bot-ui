@@ -14,16 +14,7 @@ export const Register = () => {
   const [isRedirect, setIsEedirect] = useState(false);
   const isShowPassword = showPassword ? "text" : "password";
   const navigate = useNavigate();
-  const useOutlinedInputStyles = makeStyles({
-    root: {
-      "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "blue",
-      },
-      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-        borderColor: "blue",
-      },
-    },
-  });
+
   const registerRequest = async () => {
     try {
       await axios.post("http://127.0.0.1:8000/api/register", {
@@ -89,7 +80,6 @@ export const Register = () => {
             placeholder="Отчество"
           />
           <TextField
-            className={useOutlinedInputStyles.root}
             label="Пароль"
             style={{ marginTop: "8px" }}
             variant="outlined"
@@ -98,8 +88,8 @@ export const Register = () => {
             type={isShowPassword}
           />
         </form>
-        <div>
-          <span style={{ marginTop: "16px" }}>Показать пароль </span>
+        <div style={{ marginTop: "16px" }}>
+          <span>Показать пароль </span>
           <input
             type="checkbox"
             onChange={() => setShowPassword((prev) => !prev)}
