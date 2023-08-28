@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { $api } from "../../http/index";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
+import { TextField } from "@mui/material";
 
 export const Login = () => {
   const [password, setPassword] = useState("");
@@ -34,11 +35,17 @@ export const Login = () => {
     <div className="auth_wrapper">
       <div className="auth_container">
         <form className="input_container">
-          <input
+          <TextField
+            label="Email"
+            style={{ marginTop: "8px" }}
+            variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
           />
-          <input
+          <TextField
+            label="Пароль"
+            style={{ marginTop: "8px" }}
+            variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Пароль"
             type={isShowPassword}

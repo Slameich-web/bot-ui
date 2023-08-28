@@ -4,6 +4,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
+import { TextField } from "@mui/material";
+
 export const Revenue = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -34,11 +36,13 @@ export const Revenue = () => {
                 </animated.div>
               </animated.div>
               <animated.span style={style}>Введите сумму вывода:</animated.span>
-              <animated.input
+              <TextField
+                label="Email"
+                style={{ marginTop: "8px" }}
+                variant="outlined"
                 onChange={(e) => setModalInputValue(e.target.value)}
                 className="modal_input"
-                style={style}
-              ></animated.input>
+              />
               <button
                 className={
                   modalInputValue !== 0 || ""
