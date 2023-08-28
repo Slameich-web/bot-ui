@@ -51,17 +51,17 @@ export const Register = () => {
             type="email"
           />
           <input
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setFirstName(e.target.value)}
             placeholder="Имя"
             type={isShowPassword}
           />
           <input
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setLastName(e.target.value)}
             placeholder="Фамилия"
             type={isShowPassword}
           />
           <input
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setMiddleName(e.target.value)}
             placeholder="Отчество"
             type={isShowPassword}
           />
