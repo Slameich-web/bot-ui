@@ -99,7 +99,7 @@ export const Revenue = () => {
         )}
       </div>
       <div className="revenue_container">
-        <div style={{ width: "100%", height: "100%" }}>
+        <div>
           <div className="table_title">За текущий период</div>
           <table border="2" className="table">
             <tbody>
