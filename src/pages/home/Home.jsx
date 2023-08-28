@@ -6,6 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
+import "../../App.scss";
 
 export const Home = () => {
   const getUser = async () => {
