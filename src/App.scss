@@ -94,7 +94,6 @@ body {
   height: 60%;
   align-items: center;
   margin-top: 6%;
-  justify-content: space-evenly;
   button {
     border: 1px solid var(--auth-border-color, transparent);
     border-radius: var(--auth-border-size, 2px);
@@ -170,7 +169,6 @@ body {
   height: 40%;
   margin-top: 5%;
   align-items: center;
-  justify-content: space-evenly;
 
   button {
     border: 1px solid var(--auth-border-color, transparent);
@@ -256,7 +254,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     height: 60%;
     width: 75%;
     background-color: var(--tg-theme-secondary-bg-color);
@@ -342,7 +339,6 @@ body {
   height: 60%;
   margin-top: 5%;
   align-items: center;
-  justify-content: space-evenly;
 
   button {
     border: 1px solid var(--auth-border-color, transparent);
