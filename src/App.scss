@@ -315,7 +315,10 @@ body {
 .css-i4bv87-MuiSvgIcon-root {
   cursor: pointer;
 }
-
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: var(--tg-theme-text-color);
+}
 .checkouts_table {
   width: 100%;
   border: var(--tg-theme-bg-color);
