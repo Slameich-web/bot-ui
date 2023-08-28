@@ -16,9 +16,7 @@ export const Checkouts = () => {
     <div className="checkouts_wrapper">
       <div className="checkouts_nav_container">
         <div className="drop_down">
-          <span style={{ marginTop: "1%", flex: "0 0 54%" }}>
-            Запросы на выплату
-          </span>
+          <span style={{ marginTop: "1%" }}>Запросы на выплату</span>
           <div
             className="drop_down_button"
             onClick={() => setShowNavbar((prev) => !prev)}

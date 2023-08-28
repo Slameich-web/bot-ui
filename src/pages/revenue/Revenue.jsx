@@ -53,7 +53,7 @@ export const Revenue = () => {
       )}
       <div className="rev_nav_container">
         <div className="drop_down">
-          <span style={{ marginTop: "1%", flex: "0 0 51%" }}>Доходность</span>
+          <span style={{ marginTop: "1%" }}>Доходность</span>
           <div
             className="drop_down_button"
             onClick={() => setShowNavbar((prev) => !prev)}

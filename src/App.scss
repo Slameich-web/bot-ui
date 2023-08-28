@@ -138,6 +138,7 @@ body {
 }
 
 .revenue_container {
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,13 +147,14 @@ body {
 }
 
 .revenue_wrapper {
+  margin-top: 16px;
   display: flex;
   place-items: center;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  height: 1100px;
 }
+
 .rev_nav_container {
   display: flex;
   flex-direction: column;
