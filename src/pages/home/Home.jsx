@@ -45,7 +45,6 @@ export const Home = () => {
                 to={"/revenue"}
                 style={{
                   width: "100%",
-                  height: "100%",
                   display: "flex",
                   justifyContent: "center",
                   textDecoration: "none",
@@ -58,7 +57,6 @@ export const Home = () => {
                 to={"/checkouts"}
                 style={{
                   width: "100%",
-                  height: "100%",
                   display: "flex",
                   justifyContent: "center",
                   textDecoration: "none",
