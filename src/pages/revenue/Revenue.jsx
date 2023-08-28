@@ -9,7 +9,6 @@ import { TextField } from "@mui/material";
 export const Revenue = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [modalInputValue, setModalInputValue] = useState("");
   const transition = useTransition(showNavbar, {
     from: { x: -100, y: 100, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
@@ -40,7 +39,6 @@ export const Revenue = () => {
                 label="Email"
                 style={{ marginTop: "8px" }}
                 variant="outlined"
-                onChange={(e) => setModalInputValue(e.target.value)}
                 className="modal_input"
               />
               <span style={style}>Доступно к выводу: 321</span>
