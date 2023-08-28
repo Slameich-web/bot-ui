@@ -54,7 +54,7 @@ export const Login = () => {
           />
         </form>
         <div>
-          <span>Показать пароль </span>
+          <span style={{ marginTop: "16px" }}>Показать пароль </span>
           <input
             type="checkbox"
             onChange={() => setShowPassword((prev) => !prev)}

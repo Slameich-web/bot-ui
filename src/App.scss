@@ -340,6 +340,12 @@ body {
     background-color: var(--tg-theme-button-color);
   }
 }
+.muioutlinedinput-notchedoutline {
+  border-color: var(--tg-theme-button-text-color) !important;
+}
+.mui-focused .muioutlinedinput-notchedoutline {
+  border-color: var(--tg-theme-button-text-color) !important;
+}
 .input_color {
   color: var(--tg-theme-button-color);
 }

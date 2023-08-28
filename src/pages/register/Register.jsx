@@ -90,13 +90,12 @@ export const Register = () => {
           />
         </form>
         <div>
-          <span>Показать пароль </span>
+          <span style={{ marginTop: "16px" }}>Показать пароль </span>
           <input
             type="checkbox"
             onChange={() => setShowPassword((prev) => !prev)}
           />
         </div>
-        <a href="https://ya.ru/">Забыли пароль?</a>
         <button onClick={registerRequest} className="login_button">
           Регистрация
         </button>
