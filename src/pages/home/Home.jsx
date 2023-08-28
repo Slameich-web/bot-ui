@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { $api } from "../../http/index";
 import { Link } from "react-router-dom";
+import "../../App.scss";
 
 export const Home = () => {
   const getUser = async () => {
