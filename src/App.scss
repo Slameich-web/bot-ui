@@ -55,9 +55,9 @@ body {
 .input_container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 50%;
-  height: 30%;
+  width: 70%;
+  align-content: space-around;
+  flex-wrap: wrap;
 
   input {
     height: 15%;

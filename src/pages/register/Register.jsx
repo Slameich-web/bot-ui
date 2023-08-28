@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-
+import { TextField } from "@mui/material";
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -45,27 +45,40 @@ export const Register = () => {
           autoComplete="off"
           action="users/id"
         >
-          <input
+          <TextField
+            label="Email"
+            style={{ marginTop: "8px" }}
+            variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             type="email"
           />
-          <input
+
+          <TextField
+            label="Имя"
+            style={{ marginTop: "8px" }}
+            variant="outlined"
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="Имя"
-            type={isShowPassword}
           />
-          <input
+          <TextField
+            style={{ marginTop: "8px" }}
+            label="Фамилия"
+            variant="outlined"
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Фамилия"
-            type={isShowPassword}
           />
-          <input
+          <TextField
+            label="Отчество"
+            style={{ marginTop: "8px" }}
+            variant="outlined"
             onChange={(e) => setMiddleName(e.target.value)}
             placeholder="Отчество"
-            type={isShowPassword}
           />
-          <input
+          <TextField
+            label="Пароль"
+            style={{ marginTop: "8px" }}
+            variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Пароль"
             type={isShowPassword}
