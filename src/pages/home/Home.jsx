@@ -16,44 +16,38 @@ export const Home = () => {
   useEffect(() => {
     getUser();
   });
-  const transition = useTransition({
-    from: { x: -100, y: 100, opacity: 0 },
-    enter: { x: 0, y: 0, opacity: 1 },
-    leave: { x: 100, y: 100, opacity: 0 },
-  });
+
   return (
     <div className="auth_wrapper">
       <div className="nav_container">
-        {transition((style) => (
-          <animated.div style={style} className="buttons">
-            <Link
-              to={"/revenue"}
-              style={{
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                textDecoration: "none",
-                color: "var(--tg-theme-button-text-color)",
-              }}
-            >
-              <animated.button style={style}>Доход</animated.button>
-            </Link>
-            <Link
-              to={"/checkouts"}
-              style={{
-                width: "100%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                textDecoration: "none",
-                color: "var(--tg-theme-button-text-color)",
-              }}
-            >
-              <animated.button style={style}>Запросить выплату</animated.button>
-            </Link>
-          </animated.div>
-        ))}
+        <animated.div className="buttons">
+          <Link
+            to={"/revenue"}
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              textDecoration: "none",
+              color: "var(--tg-theme-button-text-color)",
+            }}
+          >
+            <animated.button>Доход</animated.button>
+          </Link>
+          <Link
+            to={"/checkouts"}
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "center",
+              textDecoration: "none",
+              color: "var(--tg-theme-button-text-color)",
+            }}
+          >
+            <animated.button>Запросить выплату</animated.button>
+          </Link>
+        </animated.div>
       </div>
     </div>
   );
