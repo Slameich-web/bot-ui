@@ -47,9 +47,7 @@ export const Checkouts = () => {
                 <animated.button style={style}>Доходность</animated.button>
               </Link>
             </animated.div>
-          ) : (
-            ""
-          )
+          ) : undefined
         )}
       </div>
       <div className="revenue_container">

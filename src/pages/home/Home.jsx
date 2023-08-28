@@ -1,8 +1,6 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { $api } from "../../http/index";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
@@ -18,8 +16,7 @@ export const Home = () => {
   useEffect(() => {
     getUser();
   });
-  const [showNavbar, setShowNavbar] = useState(false);
-  const transition = useTransition(showNavbar, {
+  const transition = useTransition({
     from: { x: -100, y: 100, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
     leave: { x: 100, y: 100, opacity: 0 },
@@ -27,18 +24,6 @@ export const Home = () => {
   return (
     <div className="auth_wrapper">
       <div className="nav_container">
-        <div className="drop_down">
-          <div
-            className="drop_down_button"
-            onClick={() => setShowNavbar((prev) => !prev)}
-          >
-            {showNavbar ? (
-              <CloseIcon fontSize="large" />
-            ) : (
-              <MenuIcon fontSize="large" />
-            )}
-          </div>
-        </div>
         {transition((style, item) =>
           item ? (
             <animated.div style={style} className="buttons">
