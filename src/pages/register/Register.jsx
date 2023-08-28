@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [middleName, setMiddleName] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [isRedirect, setIsEedirect] = useState(false);
@@ -17,6 +20,9 @@ export const Register = () => {
       await axios.post("http://127.0.0.1:8000/api/register", {
         email: email,
         password: password,
+        first_name: firstName,
+        last_name: lastName,
+        middle_name: middleName,
         telegram_id: 542,
       });
       setIsEedirect(true);
@@ -43,6 +49,21 @@ export const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             type="email"
+          />
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Имя"
+            type={isShowPassword}
+          />
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Фамилия"
+            type={isShowPassword}
+          />
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Отчество"
+            type={isShowPassword}
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
