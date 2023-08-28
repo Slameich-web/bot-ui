@@ -4,8 +4,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
-import "../../App.scss";
-
 export const Revenue = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -60,7 +58,7 @@ export const Revenue = () => {
           ""
         )
       )}
-      <div className="nav_container">
+      <div className="rev_nav_container">
         <div className="drop_down">
           <span style={{ marginTop: "1%", flex: "0 0 51%" }}>Доходность</span>
           <div
@@ -99,7 +97,7 @@ export const Revenue = () => {
         )}
       </div>
       <div className="revenue_container">
-        <div>
+        <div style={{ width: "100%", height: "100%" }}>
           <div className="table_title">За текущий период</div>
           <table border="2" className="table">
             <tbody>
@@ -108,33 +106,15 @@ export const Revenue = () => {
                 <td>Площадка 1</td>
                 <td>Площадка 2</td>
                 <td>Площадка 3</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
-                <td>Площадка 4</td>
               </tr>
               <tr>
                 <td>Продукт 2</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
-                <td>1800 ₽</td>
               </tr>
               <tr>
                 <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-              <tr>
-                <td>Продукт 4</td>
-                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
@@ -166,6 +146,42 @@ export const Revenue = () => {
               </tr>
               <tr>
                 <td>Продукт 4</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 4</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 5</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 6</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 7</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 8</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 9</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
