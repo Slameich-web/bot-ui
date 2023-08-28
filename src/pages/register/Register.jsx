@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-import { TextField } from "@mui/material";
+import { TextField, makeStyles } from "@mui/material";
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -14,7 +14,16 @@ export const Register = () => {
   const [isRedirect, setIsEedirect] = useState(false);
   const isShowPassword = showPassword ? "text" : "password";
   const navigate = useNavigate();
-
+  const useOutlinedInputStyles = makeStyles({
+    root: {
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "blue",
+      },
+      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+        borderColor: "blue",
+      },
+    },
+  });
   const registerRequest = async () => {
     try {
       await axios.post("http://127.0.0.1:8000/api/register", {
@@ -80,7 +89,7 @@ export const Register = () => {
             placeholder="Отчество"
           />
           <TextField
-            className="input_color"
+            className={useOutlinedInputStyles.root}
             label="Пароль"
             style={{ marginTop: "8px" }}
             variant="outlined"
