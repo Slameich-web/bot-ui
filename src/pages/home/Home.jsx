@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { $api } from "../../http/index";
-import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
 
