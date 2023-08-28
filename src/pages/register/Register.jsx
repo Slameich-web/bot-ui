@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-import { TextField, makeStyles } from "@mui/material";
+import { TextField } from "@mui/material";
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
