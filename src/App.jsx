@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <Link to="/home">Home</Link>
-      <Link to="/login">login</Link>
+      <Link to="/">login</Link>
       <Link to="/register">register</Link>
       <Link to="/revenue">revenue</Link>
       <Link to="/checkouts">checkouts</Link>
