@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { $api } from "../../http/index";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [password, setPassword] = useState("");
@@ -57,6 +58,9 @@ export const Login = () => {
         <button onClick={loginRequest} className="login_button">
           Войти
         </button>
+        <div>
+          <Link to="/register">Регистрация</Link>
+        </div>
         <div>{error}</div>
       </div>
     </div>
