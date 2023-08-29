@@ -16,6 +16,12 @@ export const Checkouts = () => {
     <div className="checkouts_wrapper">
       <div className="checkouts_nav_container">
         <div className="drop_down">
+          <div
+            className="logo"
+            style={{ display: "flex", alignItems: "center", marginLeft: "5%" }}
+          >
+            Лого
+          </div>
           <div className="drop_down_title">
             <span
               style={{

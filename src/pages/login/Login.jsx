@@ -3,7 +3,6 @@ import { $api } from "../../http/index";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 export const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");

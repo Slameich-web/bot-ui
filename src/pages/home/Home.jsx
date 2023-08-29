@@ -29,6 +29,12 @@ export const Home = () => {
       <div className="nav_container">
         <div className="drop_down">
           <div
+            className="logo"
+            style={{ display: "flex", alignItems: "center", marginLeft: "5%" }}
+          >
+            Лого
+          </div>
+          <div
             className="drop_down_button"
             onClick={() => setShowNavbar((prev) => !prev)}
           >
