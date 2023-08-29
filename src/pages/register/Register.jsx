@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-import { TextField } from "@mui/material";
+
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -40,55 +40,50 @@ export const Register = () => {
     <div className="auth_wrapper">
       <div className="auth_container">
         <form
-          className="input_container"
+          className="reg_input_container"
           method="POST"
           autoComplete="off"
           action="users/id"
         >
-          <TextField
-            className="input_color"
+          <input
+            className="auth_input"
             label="Email"
-            style={{ marginTop: "8px" }}
             variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             type="email"
           />
 
-          <TextField
-            className="input_color"
+          <input
+            className="auth_input"
             label="Имя"
-            style={{ marginTop: "8px" }}
             variant="outlined"
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="Имя"
           />
-          <TextField
+          <input
             className="input_color"
-            style={{ marginTop: "8px" }}
             label="Фамилия"
             variant="outlined"
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Фамилия"
           />
-          <TextField
+          <input
             className="input_color"
             label="Отчество"
-            style={{ marginTop: "8px" }}
             variant="outlined"
             onChange={(e) => setMiddleName(e.target.value)}
             placeholder="Отчество"
           />
-          <TextField
+          <input
             label="Пароль"
-            style={{ marginTop: "8px" }}
             variant="outlined"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Пароль"
             type={isShowPassword}
           />
         </form>
-        <div style={{ marginTop: "16px" }}>
+        <div>
           <span>Показать пароль </span>
           <input
             type="checkbox"

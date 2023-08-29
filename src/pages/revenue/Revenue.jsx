@@ -4,7 +4,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
-import { TextField } from "@mui/material";
 
 export const Revenue = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -35,12 +34,7 @@ export const Revenue = () => {
                 </animated.div>
               </animated.div>
               <animated.span style={style}>Введите сумму вывода:</animated.span>
-              <TextField
-                label="Сумма выплат"
-                style={{ marginBottom: "16px" }}
-                variant="outlined"
-                className="modal_input"
-              />
+              <input className="modal_input" placeholder="Введите сумму" />
               <span style={style}>Доступно к выводу: 321</span>
               <button className="modal_button_active" style={style}>
                 Запросить выплату
@@ -52,8 +46,18 @@ export const Revenue = () => {
         )
       )}
       <div className="rev_nav_container">
-        <div className="drop_down">
-          <span style={{ marginTop: "1%" }}>Доходность</span>
+        <div className="rev_drop_down">
+          <div className="rev_drop_down_title">
+            <span
+              style={{
+                marginTop: "1%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              Доходность
+            </span>
+          </div>
           <div
             className="drop_down_button"
             onClick={() => setShowNavbar((prev) => !prev)}
@@ -71,11 +75,13 @@ export const Revenue = () => {
               <Link
                 to={"/checkouts"}
                 style={{
-                  width: "100%",
+                  width: "20%",
                   display: "flex",
                   justifyContent: "center",
                   textDecoration: "none",
                   color: "var(--tg-theme-button-text-color)",
+                  position: "sticky",
+                  left: "0",
                 }}
               >
                 <animated.button style={style}>
@@ -90,7 +96,9 @@ export const Revenue = () => {
       </div>
       <div className="revenue_container">
         <div style={{ width: "100%", height: "100%" }}>
-          <div className="table_title">За текущий период</div>
+          <div className="table_title">
+            <span>За текущий период</span>
+          </div>
           <table border="2" className="table">
             <tbody>
               <tr>
@@ -98,15 +106,57 @@ export const Revenue = () => {
                 <td>Площадка 1</td>
                 <td>Площадка 2</td>
                 <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
               </tr>
               <tr>
                 <td>Продукт 2</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
               </tr>
               <tr>
                 <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+              </tr>
+              <tr>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
@@ -115,13 +165,21 @@ export const Revenue = () => {
           </table>
         </div>
         <div style={{ width: "100%", height: "100%" }}>
-          <div className="table_title">За весь период</div>
+          <div className="table_title">
+            <span>За весь период</span>
+          </div>
           <table border="2" className="table">
             <tbody>
               <tr>
                 <td></td>
                 <td>Площадка 1</td>
                 <td>Площадка 2</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
+                <td>Площадка 3</td>
                 <td>Площадка 3</td>
               </tr>
               <tr>
@@ -136,44 +194,93 @@ export const Revenue = () => {
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 4</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 4</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 5</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 6</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 7</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 8</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
               </tr>
+
               <tr>
-                <td>Продукт 9</td>
+                <td>Продукт 3</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
+                <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
                 <td>1800 ₽</td>
@@ -182,12 +289,14 @@ export const Revenue = () => {
           </table>
         </div>
       </div>
-      <button
-        className="check_out_button"
-        onClick={() => setShowModal((prev) => !prev)}
-      >
-        Вывести в рублях
-      </button>
+      <div className="check_out_button_container">
+        <button
+          className="check_out_button"
+          onClick={() => setShowModal((prev) => !prev)}
+        >
+          Вывести в рублях
+        </button>
+      </div>
     </div>
   );
 };

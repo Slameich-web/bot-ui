@@ -20,7 +20,12 @@ body {
   flex-direction: column;
   height: 700px;
 }
-
+.reg_wrapper {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  height: 1700px;
+}
 .auth_container {
   display: flex;
   flex-direction: column;
@@ -56,18 +61,38 @@ body {
   display: flex;
   flex-direction: column;
   width: 70%;
+  height: 30%;
   align-content: space-around;
   flex-wrap: wrap;
 
   input {
-    height: 15%;
-    font-weight: 600;
+    height: 30%;
+    width: 70%;
+    background: transparent;
     border-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-color);
     border-radius: 4px;
     margin: 10px 0;
   }
 }
+.reg_input_container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  align-content: space-around;
+  flex-wrap: wrap;
 
+  input {
+    height: 10%;
+    width: 70%;
+    background: transparent;
+    border-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-color);
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+}
 .checkbox {
   accent-color: var(--tg-theme-button-color);
 }
@@ -120,6 +145,29 @@ body {
     flex: 0 0 45%;
   }
 }
+.rev_drop_down_title {
+  width: 75%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  background-color: var(--tg-theme-secondary-bg-color);
+  span {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.drop_down_title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  span {
+    margin-top: 1%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+  }
+}
 .drop_down_tile_wrapper {
   height: 100%;
   display: flex;
@@ -147,7 +195,7 @@ body {
 }
 
 .revenue_wrapper {
-  margin-top: 16px;
+  width: 2000px;
   display: flex;
   place-items: center;
   flex-direction: column;
@@ -158,17 +206,26 @@ body {
 .rev_nav_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+}
+.rev_drop_down {
+  width: 18.8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: sticky;
+  left: 0;
+  background-color: var(--tg-theme-secondary-bg-color);
 }
 
 .rev_buttons {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 80px;
+  height: 60%;
   margin-top: 16px;
-  align-items: center;
+  align-items: flex-start;
 
   button {
     border: 1px solid var(--auth-border-color, transparent);
@@ -176,7 +233,7 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     width: 80%;
-    height: 60%;
+    height: 80px;
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     outline: none;
@@ -197,6 +254,7 @@ body {
 
   td {
     text-align: center;
+    width: 25%;
     height: 50px;
   }
   tr:nth-child(1) {
@@ -209,8 +267,11 @@ body {
 .table_title {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--tg-theme-secondary-bg-color);
+  span {
+    margin-left: 5.5%;
+  }
 }
 
 .check_out_button {
@@ -218,10 +279,10 @@ body {
   border-radius: var(--auth-border-size, 2px);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-  width: 100%;
+  width: 21%;
   position: sticky;
-  bottom: 0;
-  height: 7%;
+  left: 0;
+  height: 65px;
   background-color: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
   outline: none;
@@ -232,6 +293,13 @@ body {
   white-space: nowrap;
   cursor: pointer;
   z-index: 2;
+}
+.check_out_button_container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  position: sticky;
+  bottom: 0;
 }
 
 .modal {
@@ -254,6 +322,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     height: 60%;
     width: 75%;
     background-color: var(--tg-theme-secondary-bg-color);
@@ -263,9 +332,11 @@ body {
 }
 
 .modal_input {
-  height: 5%;
-  font-weight: 600;
+  height: 15%;
+  width: 70%;
   border-color: var(--tg-theme-button-color);
+  background: transparent;
+  color: var(--tg-theme-button-color);
   border-radius: 4px;
   margin: 10px 0;
 }
@@ -382,4 +453,12 @@ body {
   justify-content: center;
   position: relative;
   height: 1000px;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 3px solid red !important;
+}
+
+.css-syfz7k-MuiFormControl-root-MuiTextField-root input {
+  color: red !important;
 }

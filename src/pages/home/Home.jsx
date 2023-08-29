@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+// import { useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
-import { $api } from "../../http/index";
+// import { $api } from "../../http/index";
 
 export const Home = () => {
-  const getUser = async () => {
-    try {
-      await $api.get("/api/user");
-    } catch (e) {
-      console.log(e.response.data.message);
-    }
-  };
-  useEffect(() => {
-    getUser();
-  });
+  // const getUser = async () => {
+  //   try {
+  //     await $api.get("/api/user");
+  //   } catch (e) {
+  //     console.log(e.response.data.message);
+  //   }
+  // };
+  // useEffect(() => {
+  //   getUser();
+  // });
   const [showNavbar, setShowNavbar] = useState(false);
   const transition = useTransition(showNavbar, {
     from: { x: -100, y: 100, opacity: 0 },

@@ -16,7 +16,17 @@ export const Checkouts = () => {
     <div className="checkouts_wrapper">
       <div className="checkouts_nav_container">
         <div className="drop_down">
-          <span style={{ marginTop: "1%" }}>Запросы на выплату</span>
+          <div className="drop_down_title">
+            <span
+              style={{
+                marginTop: "1%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              Запросы на выплату
+            </span>
+          </div>
           <div
             className="drop_down_button"
             onClick={() => setShowNavbar((prev) => !prev)}
