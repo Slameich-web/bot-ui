@@ -7,39 +7,18 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 body {
   margin: 0;
   background-color: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
-.App {
-  text-align: center;
-  min-height: 80vh;
-}
 
-.main-card {
-  max-width: "800px";
-  max-height: "540px";
-  overflow-x: "auto";
-  overflow-y: "auto";
-}
 .auth_wrapper {
   display: flex;
   place-items: center;
   flex-direction: column;
+  height: 700px;
 }
 .reg_wrapper {
   display: flex;
@@ -221,6 +200,15 @@ body {
   align-items: center;
   height: 100%;
   width: 100%;
+}
+
+.revenue_wrapper {
+  width: 2000px;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .rev_nav_container {
