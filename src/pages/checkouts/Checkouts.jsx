@@ -20,7 +20,7 @@ export const Checkouts = () => {
             className="logo"
             style={{ display: "flex", alignItems: "center", marginLeft: "5%" }}
           >
-            Лого
+            Shriftovik
           </div>
           <div className="drop_down_title">
             <span

@@ -51,7 +51,7 @@ export const Revenue = () => {
             className="logo"
             style={{ display: "flex", alignItems: "center" }}
           >
-            Лого
+            Shriftovik
           </div>
           <div className="rev_drop_down_title">
             <span
