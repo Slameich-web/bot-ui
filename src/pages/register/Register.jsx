@@ -41,9 +41,14 @@ export const Register = () => {
     <div className="auth_wrapper">
       <Label text="Регистрация" />
       <div className="auth_container">
-        <form className="input_container">
+        <form
+          className="reg_input_container"
+          method="POST"
+          autoComplete="off"
+          action="users/id"
+        >
           <input
-            className="auth_input"
+            className="auth_color"
             label="Email"
             variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
@@ -52,7 +57,7 @@ export const Register = () => {
           />
 
           <input
-            className="auth_input"
+            className="auth_color"
             label="Имя"
             variant="outlined"
             onChange={(e) => setFirstName(e.target.value)}

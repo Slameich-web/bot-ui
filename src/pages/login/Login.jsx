@@ -37,7 +37,7 @@ export const Login = () => {
       <div className="auth_container">
         <form className="input_container">
           <input
-            className="auth_input"
+            className="auth_color"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
           />
