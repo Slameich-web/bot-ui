@@ -32,7 +32,7 @@ export const Login = () => {
   let tg = window.Telegram.WebApp;
   useEffect(() => {
     tg.MainButton.show();
-    tg.MainButton.text("Войти");
+    tg.MainButton.text = "Войти";
   }, [tg.MainButton]);
   return (
     <div className="auth_wrapper">
