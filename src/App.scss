@@ -242,7 +242,7 @@ body {
     box-sizing: border-box;
     width: 80%;
     height: 80px;
-    background-color: var(--tg-theme-button-color);
+    background: var(--tg-theme-secondary-bg-color);
     color: var(--tg-theme-button-text-color);
     outline: none;
     overflow: hidden;
@@ -443,7 +443,7 @@ body {
     box-sizing: border-box;
     width: 80%;
     height: 80px;
-    background-color: var(--tg-theme-button-color);
+    background: var(--tg-theme-secondary-bg-color);
     color: var(--tg-theme-button-text-color);
     outline: none;
     overflow: hidden;

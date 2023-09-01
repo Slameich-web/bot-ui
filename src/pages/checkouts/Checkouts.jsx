@@ -52,9 +52,9 @@ export const Checkouts = () => {
                 style={{
                   width: "100%",
                   display: "flex",
-                  marginTop: "8px",
                   justifyContent: "center",
                   textDecoration: "none",
+
                   color: "var(--tg-theme-button-text-color)",
                 }}
               >

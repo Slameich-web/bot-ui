@@ -81,12 +81,13 @@ export const Revenue = () => {
               <Link
                 to={"/checkouts"}
                 style={{
-                  width: "100%",
+                  width: "20%",
                   display: "flex",
-                  marginTop: "8px",
                   justifyContent: "center",
                   textDecoration: "none",
                   color: "var(--tg-theme-button-text-color)",
+                  position: "sticky",
+                  left: "0",
                 }}
               >
                 <animated.button style={style}>
