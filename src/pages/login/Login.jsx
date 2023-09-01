@@ -32,6 +32,7 @@ export const Login = () => {
 
   return (
     <div className="auth_wrapper">
+      <div className="auth_label">Авторизация</div>
       <div className="auth_container">
         <form className="input_container">
           <input
