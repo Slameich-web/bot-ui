@@ -67,10 +67,9 @@ body {
   input {
     height: 30%;
     width: 100%;
-    background: transparent;
-    border-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-color);
-    border-radius: 4px;
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-text-color);
+    border-radius: 8px;
     margin: 10px 0;
   }
 }
