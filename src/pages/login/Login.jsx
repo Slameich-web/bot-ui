@@ -29,11 +29,7 @@ export const Login = () => {
       return navigate("/home");
     }
   }, [isRedirect, navigate]);
-  let tg = window.Telegram.WebApp;
-  useEffect(() => {
-    tg.MainButton.show();
-    tg.MainButton.text = "Войти";
-  }, [tg.MainButton]);
+
   return (
     <div className="auth_wrapper">
       <div className="auth_label">Авторизация</div>
