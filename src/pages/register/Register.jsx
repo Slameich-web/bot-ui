@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
+import { Label } from "../../components/Label.tsx";
 
 export const Register = () => {
   const [password, setPassword] = useState("");
@@ -38,6 +39,7 @@ export const Register = () => {
 
   return (
     <div className="auth_wrapper">
+      <Label text="Регистрация" />
       <div className="auth_container">
         <form
           className="reg_input_container"

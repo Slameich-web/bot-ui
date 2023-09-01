@@ -3,6 +3,7 @@ import { $api } from "../../http/index";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Label } from "../../components/Label.tsx";
 export const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -32,7 +33,7 @@ export const Login = () => {
 
   return (
     <div className="auth_wrapper">
-      <div className="auth_label">Авторизация</div>
+      <Label text="Авторизация" />
       <div className="auth_container">
         <form className="input_container">
           <input
