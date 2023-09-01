@@ -4,7 +4,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useTransition } from "@react-spring/web";
 import { animated } from "@react-spring/web";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
+import ScrollableTable from "../../components/ScrollableTable.tsx";
 export const Revenue = () => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -18,6 +20,7 @@ export const Revenue = () => {
     enter: { x: 0, y: 0, opacity: 1 },
     leave: { x: 100, y: 100, opacity: 0 },
   });
+
   return (
     <div className="revenue_wrapper">
       {modalTransition((style, item) =>
@@ -105,194 +108,12 @@ export const Revenue = () => {
           <div className="table_title">
             <span>За текущий период</span>
           </div>
-          <table border="2" className="table">
-            <tbody>
-              <tr>
-                <td></td>
-                <td>Площадка 1</td>
-                <td>Площадка 2</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-              </tr>
-              <tr>
-                <td>Продукт 2</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div style={{ width: "100%", height: "100%" }}>
-          <div className="table_title">
-            <span>За весь период</span>
-          </div>
-          <table border="2" className="table">
-            <tbody>
-              <tr>
-                <td></td>
-                <td>Площадка 1</td>
-                <td>Площадка 2</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-                <td>Площадка 3</td>
-              </tr>
-              <tr>
-                <td>Продукт 2</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-
-              <tr>
-                <td>Продукт 3</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-                <td>1800 ₽</td>
-              </tr>
-            </tbody>
-          </table>
+          <Container
+            className="App d-flex justify-content-center align-items-center"
+            fluid
+          >
+            <ScrollableTable rows={5} cols={12} />
+          </Container>
         </div>
       </div>
       <div className="check_out_button_container">
