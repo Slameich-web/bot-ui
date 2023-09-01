@@ -41,12 +41,7 @@ export const Register = () => {
     <div className="auth_wrapper">
       <Label text="Регистрация" />
       <div className="auth_container">
-        <form
-          className="reg_input_container"
-          method="POST"
-          autoComplete="off"
-          action="users/id"
-        >
+        <form className="input_container">
           <input
             className="auth_input"
             label="Email"
