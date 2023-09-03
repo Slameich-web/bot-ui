@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-import RegInputs from "./components/RegInputs";
+import { RegInputs } from "./components/RegInputs";
 import { Label } from "../../components/Label";
 import { useTelegram } from "../../utils/useTelegram";
 

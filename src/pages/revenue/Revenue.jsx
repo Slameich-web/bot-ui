@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from "react";
-import Modal from "./components/Modal";
+import { Modal } from "./components/Modal";
 import { RevDropDown } from "./components/RevDropDown";
 import { Table } from "./components/Table";
 import { useTelegram } from "../../utils/useTelegram";

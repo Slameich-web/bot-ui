@@ -1,6 +1,6 @@
 import React from "react";
 
-function Modal({ setShowModal }) {
+export const Modal = ({ setShowModal }) => {
   return (
     <div className="modal" onClick={() => setShowModal((prev) => !prev)}>
       <div className="modal_content" onClick={(e) => e.stopPropagation()}>
@@ -15,6 +15,4 @@ function Modal({ setShowModal }) {
       </div>
     </div>
   );
-}
-
-export default Modal;
+};
