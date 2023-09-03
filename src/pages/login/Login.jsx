@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import LoginInputs from "./components/LoginInputs";
 import LoginButtons from "./components/LoginButtons";
 import { Label } from "../../components/Label.jsx";
+import { useTelegram } from "../../useTelegram";
+
 export const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -14,6 +16,7 @@ export const Login = () => {
 
   const isShowPassword = showPassword ? "text" : "password";
   const navigate = useNavigate();
+  const { tg } = useTelegram();
 
   const loginRequest = async () => {
     try {
@@ -27,7 +30,10 @@ export const Login = () => {
     }
   };
   useEffect(() => {
-    window.Telegram.WebApp.tg.MainButton.text = "aaaaa";
+    tg.MainButton.setParams({
+      text: "Отправить данные",
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     if (isRedirect) {

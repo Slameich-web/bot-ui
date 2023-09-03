@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Login } from "./pages/login/Login";
 import { Home } from "./pages/home/Home";
 import { Routes, Route, Link } from "react-router-dom";
@@ -6,11 +6,15 @@ import "./App.scss";
 import { Register } from "./pages/register/Register";
 import { Revenue } from "./pages/revenue/Revenue";
 import { Checkouts } from "./pages/checkouts/Checkouts";
+import { useTelegram } from "./useTelegram";
 
 const App = () => {
-  let tg = window.Telegram.WebApp;
-  tg.MainButton.text = "aaa";
-  tg.MainButton.isVisible = true;
+  const { tg } = useTelegram();
+
+  useEffect(() => {
+    tg.ready();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       <Link to="/home">Home</Link>
