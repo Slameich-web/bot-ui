@@ -5,5 +5,5 @@ export const ProtectedRoutes = ({ loggedIn }) => {
 };
 
 export const ProtectedManagerRoutes = ({ role }) => {
-  return role !== "user" ? <Outlet /> : <Navigate to="/" />;
+  return role !== "user" ? <Outlet /> : <Navigate to="/home" />;
 };
