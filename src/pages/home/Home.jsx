@@ -22,7 +22,7 @@ export const Home = () => {
           showNavbar={showNavbar}
           setShowNavbar={() => setShowNavbar((prev) => !prev)}
         />
-        {showNavbar ? <HomeButtons /> : ""}
+        {showNavbar ? <HomeButtons /> : undefined}
       </div>
     </div>
   );
