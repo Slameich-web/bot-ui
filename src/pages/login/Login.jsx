@@ -4,6 +4,7 @@ import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import LoginInputs from "./components/LoginInputs";
 import LoginButtons from "./components/LoginButtons";
+import { Label } from "../../components/Label.tsx";
 export const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -33,6 +34,7 @@ export const Login = () => {
 
   return (
     <div className="auth_wrapper">
+      <Label text="Авторизация" />
       <div className="auth_container">
         <LoginInputs
           setEmail={setEmail}
