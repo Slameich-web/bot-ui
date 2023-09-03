@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { useEffect } from "react";
-import HomeDropDown from "./components/HomeDropDown";
+import { HomeDropDown } from "./components/HomeDropDown";
 import HomeButtons from "./components/HomeButtons";
 import { useTelegram } from "../../utils/useTelegram";
 

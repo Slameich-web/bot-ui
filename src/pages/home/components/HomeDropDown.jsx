@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-function HomeDropDown({ showNavbar, setShowNavbar }) {
+export const HomeDropDown = memo(({ showNavbar, setShowNavbar }) => {
   return (
     <div className="drop_down">
       <div className="logo">Лого</div>
@@ -14,6 +14,4 @@ function HomeDropDown({ showNavbar, setShowNavbar }) {
       </div>
     </div>
   );
-}
-
-export default HomeDropDown;
+});
