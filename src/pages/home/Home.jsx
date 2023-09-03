@@ -7,16 +7,6 @@ import { useTelegram } from "../../useTelegram";
 // import { $api } from "../../http/index";
 
 export const Home = () => {
-  // const getUser = async () => {
-  //   try {
-  //     await $api.get("/api/user");
-  //   } catch (e) {
-  //     console.log(e.response.data.message);
-  //   }
-  // };
-  // useEffect(() => {
-  //   getUser();
-  // });
   const [showNavbar, setShowNavbar] = useState(false);
   const { tg } = useTelegram();
 

@@ -1,11 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-const useAuth = () => {
-  const user = { loggedIn: false };
-  return user && user.loggedIn;
+export const ProtectedRoutes = (loggedIn) => {
+  return loggedIn ? <Outlet /> : <Navigate to="/" />;
 };
 
-export const ProtectedRoutes = () => {
-  const isAuth = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to="/" />;
+export const ProtectedManagerRoutes = (role) => {
+  return role !== "user" ? <Outlet /> : <Navigate to="/" />;
 };
