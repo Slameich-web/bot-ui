@@ -36,6 +36,7 @@ export const Login = () => {
     });
     tg.onEvent("mainButtonClicked", loginRequest);
     return () => {
+      tg.MainButton.hide();
       tg.offEvent("mainButtonClicked", loginRequest);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
