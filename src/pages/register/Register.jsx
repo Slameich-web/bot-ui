@@ -4,6 +4,8 @@ import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import RegInputs from "./components/RegInputs";
 import { Label } from "../../components/Label.jsx";
+import { useTelegram } from "../../useTelegram";
+
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -15,6 +17,7 @@ export const Register = () => {
   const [isRedirect, setIsEedirect] = useState(false);
   const isShowPassword = showPassword ? "text" : "password";
   const navigate = useNavigate();
+  const { tg } = useTelegram();
 
   const registerRequest = async () => {
     try {
@@ -36,7 +39,17 @@ export const Register = () => {
       return navigate("/login");
     }
   }, [isRedirect, navigate]);
-
+  useEffect(() => {
+    tg.MainButton.show();
+    tg.MainButton.setParams({
+      text: "Регистрация",
+    });
+    tg.onEvent("mainButtonClicked", registerRequest);
+    return () => {
+      tg.offEvent("mainButtonClicked", registerRequest);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div className="auth_wrapper">
       <Label text="Регистрация" />
@@ -53,9 +66,6 @@ export const Register = () => {
 
         <div>{error}</div>
       </div>
-      <button onClick={registerRequest} className="login_button">
-        Регистрация
-      </button>
     </div>
   );
 };
