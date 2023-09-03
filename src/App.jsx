@@ -8,7 +8,8 @@ import { Revenue } from "./pages/revenue/Revenue";
 import { Checkouts } from "./pages/checkouts/Checkouts";
 
 const App = () => {
-  //let tg = window.Telegram.WebApp;
+  let tg = window.Telegram.WebApp;
+  tg.MainButton.text = "aaa";
   return (
     <>
       <Link to="/home">Home</Link>
@@ -16,9 +17,7 @@ const App = () => {
       <Link to="/register">register</Link>
       <Link to="/revenue">revenue</Link>
       <Link to="/checkouts">checkouts</Link>
-      {
-        //tg.initDataUnsafe.user.id
-      }
+      {tg.initDataUnsafe.user.id}
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Login />} />
