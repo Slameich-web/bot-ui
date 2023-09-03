@@ -93,6 +93,26 @@ body {
     padding: 0;
   }
 }
+.login_buttons_container {
+  button {
+    border: 1px solid var(--auth-border-color, transparent);
+    border-radius: var(--auth-border-size, 2px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    background: var(--tg-theme-secondary-bg-color);
+    color: var(--tg-theme-button-text-color);
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 40%;
+    height: 10%;
+    padding: 0;
+  }
+}
 
 .login_input_container {
   display: flex;
