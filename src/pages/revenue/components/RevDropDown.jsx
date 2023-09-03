@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { ShowNavbar } from "./ShowNavbar";
+import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 export const RevDropDown = memo(({ setShowNavbar, showNavbar }) => {
@@ -21,7 +21,24 @@ export const RevDropDown = memo(({ setShowNavbar, showNavbar }) => {
           )}
         </div>
       </div>
-      <ShowNavbar showNavbar={showNavbar} />
+      {showNavbar ? (
+        <div className="rev_buttons">
+          <Link
+            to={"/checkouts"}
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              textDecoration: "none",
+              color: "var(--tg-theme-button-text-color)",
+              position: "sticky",
+              left: "0",
+            }}
+          >
+            <button>Запросить выплату</button>
+          </Link>
+        </div>
+      ) : undefined}
     </div>
   );
 });
