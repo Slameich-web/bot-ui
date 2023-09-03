@@ -27,6 +27,7 @@ export const Login = () => {
       setIsEedirect(true);
       setError("aaaaaaaaaaaaaaaaaaaaaa");
     } catch (e) {
+      setError("aaaaaaaaaaaaaaaaaaaaaa");
       setError(e?.response?.data?.message);
     }
   };
