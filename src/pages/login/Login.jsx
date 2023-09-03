@@ -27,6 +27,9 @@ export const Login = () => {
     }
   };
   useEffect(() => {
+    window.Telegram.WebApp.tg.MainButton.text = "aaaaa";
+  }, []);
+  useEffect(() => {
     if (isRedirect) {
       return navigate("/home");
     }
