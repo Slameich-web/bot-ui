@@ -27,8 +27,6 @@ export const Login = () => {
       setIsEedirect(true);
     } catch (e) {
       setError(e?.response?.data?.message);
-    } finally {
-      setError("aaaaaaaaaaaaaaaaaaaaaa");
     }
   };
   useEffect(() => {
@@ -47,9 +45,6 @@ export const Login = () => {
       return navigate("/home");
     }
   }, [isRedirect, navigate]);
-  if (error) {
-    return null;
-  }
   return (
     <div className="auth_wrapper">
       <Label text="Авторизация" />
