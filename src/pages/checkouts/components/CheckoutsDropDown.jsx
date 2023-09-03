@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-function CheckoutsDropDown({ setShowNavbar, showNavbar }) {
+export const CheckoutsDropDown = memo(({ setShowNavbar, showNavbar }) => {
   return (
     <div className="checkouts_nav_container">
       <div className="drop_down">
@@ -36,11 +36,7 @@ function CheckoutsDropDown({ setShowNavbar, showNavbar }) {
             <button>Доходность</button>
           </Link>
         </div>
-      ) : (
-        ""
-      )}
+      ) : undefined}
     </div>
   );
-}
-
-export default CheckoutsDropDown;
+});

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { useEffect } from "react";
 import { HomeDropDown } from "./components/HomeDropDown";
-import HomeButtons from "./components/HomeButtons";
+import { HomeButtons } from "./components/HomeButtons";
 import { useTelegram } from "../../utils/useTelegram";
 
 // import { $api } from "../../http/index";

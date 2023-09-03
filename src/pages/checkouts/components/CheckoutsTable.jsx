@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-function CheckoutsTable() {
+export const CheckoutsTable = memo(() => {
   return (
     <div className="revenue_container">
       <div className="table_wrap">
@@ -21,6 +21,4 @@ function CheckoutsTable() {
       </div>
     </div>
   );
-}
-
-export default CheckoutsTable;
+});

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
-function HomeButtons() {
+export const HomeButtons = memo(() => {
   return (
     <div className="buttons">
       <Link
@@ -31,6 +31,4 @@ function HomeButtons() {
       </Link>
     </div>
   );
-}
-
-export default HomeButtons;
+});
