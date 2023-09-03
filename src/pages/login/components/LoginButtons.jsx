@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
-function LoginButtons() {
+export const LoginButtons = memo(() => {
   return (
     <div className="login_buttons_container">
       <Link to="/register">
@@ -8,6 +8,4 @@ function LoginButtons() {
       </Link>
     </div>
   );
-}
-
-export default LoginButtons;
+});

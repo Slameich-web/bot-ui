@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { $api } from "../../http/index";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-import LoginInputs from "./components/LoginInputs";
-import LoginButtons from "./components/LoginButtons";
+import { LoginInputs } from "./components/LoginInputs";
+import { LoginButtons } from "./components/LoginButtons";
 import { Label } from "../../components/Label";
 import { useTelegram } from "../../utils/useTelegram";
 
