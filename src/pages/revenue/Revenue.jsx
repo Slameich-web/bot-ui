@@ -10,7 +10,7 @@ export const Revenue = () => {
   const { tg } = useTelegram();
 
   const showModalClick = useCallback(() => {
-    return () => setShowModal(true);
+    setShowModal(true);
   }, []);
   useEffect(() => {
     tg.MainButton.show();
