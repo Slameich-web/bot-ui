@@ -25,6 +25,7 @@ export const Login = () => {
         password: password,
       });
       setIsEedirect(true);
+      throw new Error();
     } catch (e) {
       setError(e?.response?.data?.message);
     }
@@ -34,6 +35,10 @@ export const Login = () => {
     tg.MainButton.setParams({
       text: "Войти",
     });
+    tg.onEvent("mainButtonClicked", loginRequest);
+    return () => {
+      tg.offEvent("mainButtonClicked", loginRequest);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
@@ -55,9 +60,6 @@ export const Login = () => {
       </div>
       <LoginButtons />
       <div>{error}</div>
-      <button onClick={loginRequest} className="login_button">
-        Войти
-      </button>
     </div>
   );
 };
