@@ -25,10 +25,10 @@ export const Login = () => {
         password: password,
       });
       setIsEedirect(true);
-      setError("aaaaaaaaaaaaaaaaaaaaaa");
     } catch (e) {
-      setError("aaaaaaaaaaaaaaaaaaaaaa");
       setError(e?.response?.data?.message);
+    } finally {
+      setError("aaaaaaaaaaaaaaaaaaaaaa");
     }
   };
   useEffect(() => {
@@ -47,7 +47,9 @@ export const Login = () => {
       return navigate("/home");
     }
   }, [isRedirect, navigate]);
-
+  if (error) {
+    return null;
+  }
   return (
     <div className="auth_wrapper">
       <Label text="Авторизация" />
