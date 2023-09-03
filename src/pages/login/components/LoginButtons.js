@@ -4,7 +4,7 @@ function LoginButtons({ loginRequest }) {
   return (
     <div className="login_buttons_container">
       <Link to="/register">
-        <button>Регистрация</button>
+        <button className="login_buttons_container_button">Регистрация</button>
       </Link>
     </div>
   );
