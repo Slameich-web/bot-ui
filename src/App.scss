@@ -284,13 +284,11 @@ body {
   }
 }
 .table_wrap {
-  width: 100%;
   overflow: auto;
   margin-bottom: 5%;
 }
 
 .table {
-  width: 2500px;
   border: var(--tg-theme-bg-color);
   border-spacing: 0;
   table-layout: fixed;
