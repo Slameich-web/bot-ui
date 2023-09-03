@@ -25,6 +25,7 @@ export const Login = () => {
         password: password,
       });
       setIsEedirect(true);
+      setError("aaaaaaaaaaaaaaaaaaaaaa");
     } catch (e) {
       setError(e?.response?.data?.message);
     }
