@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 // import { useEffect } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import { useTransition } from "@react-spring/web";
-import { animated } from "@react-spring/web";
-import { Link } from "react-router-dom";
+import HomeDropDown from "./components/HomeDropDown";
+import HomeButtons from "./components/HomeButtons";
 // import { $api } from "../../http/index";
 
 export const Home = () => {
@@ -19,67 +16,14 @@ export const Home = () => {
   //   getUser();
   // });
   const [showNavbar, setShowNavbar] = useState(false);
-  const transition = useTransition(showNavbar, {
-    from: { x: -100, y: 100, opacity: 0 },
-    enter: { x: 0, y: 0, opacity: 1 },
-    leave: { x: 100, y: 100, opacity: 0 },
-  });
   return (
     <div className="auth_wrapper">
       <div className="nav_container">
-        <div className="drop_down">
-          <div
-            className="logo"
-            style={{ display: "flex", alignItems: "center", marginLeft: "5%" }}
-          >
-            Shriftovik
-          </div>
-          <div
-            className="drop_down_button"
-            onClick={() => setShowNavbar((prev) => !prev)}
-          >
-            {showNavbar ? (
-              <CloseIcon fontSize="large" />
-            ) : (
-              <MenuIcon fontSize="large" />
-            )}
-          </div>
-        </div>
-        {transition((style, item) =>
-          item ? (
-            <animated.div style={style} className="buttons">
-              <Link
-                to={"/revenue"}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                  color: "var(--tg-theme-button-text-color)",
-                }}
-              >
-                <animated.button style={style}>Доход</animated.button>
-              </Link>
-              <Link
-                to={"/checkouts"}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  marginTop: "8px",
-                  justifyContent: "center",
-                  textDecoration: "none",
-                  color: "var(--tg-theme-button-text-color)",
-                }}
-              >
-                <animated.button style={style}>
-                  Запросить выплату
-                </animated.button>
-              </Link>
-            </animated.div>
-          ) : (
-            ""
-          )
-        )}
+        <HomeDropDown
+          showNavbar={showNavbar}
+          setShowNavbar={() => setShowNavbar((prev) => !prev)}
+        />
+        {showNavbar ? <HomeButtons /> : ""}
       </div>
     </div>
   );

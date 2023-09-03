@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
-import { Label } from "../../components/Label.tsx";
-
+import RegInputs from "./components/RegInputs";
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -39,64 +38,22 @@ export const Register = () => {
 
   return (
     <div className="auth_wrapper">
-      <Label text="Регистрация" />
-      <div className="auth_container">
-        <form
-          className="reg_input_container"
-          method="POST"
-          autoComplete="off"
-          action="users/id"
-        >
-          <input
-            className="auth_color"
-            label="Email"
-            variant="outlined"
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email"
-            type="email"
-          />
+      <div className="reg_container">
+        <RegInputs
+          setEmail={setEmail}
+          setFirstName={setFirstName}
+          setLastName={setLastName}
+          setMiddleName={setMiddleName}
+          setPassword={setPassword}
+          isShowPassword={isShowPassword}
+          setShowPassword={() => setShowPassword((prev) => !prev)}
+        />
 
-          <input
-            className="auth_color"
-            label="Имя"
-            variant="outlined"
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder="Имя"
-          />
-          <input
-            className="input_color"
-            label="Фамилия"
-            variant="outlined"
-            onChange={(e) => setLastName(e.target.value)}
-            placeholder="Фамилия"
-          />
-          <input
-            className="input_color"
-            label="Отчество"
-            variant="outlined"
-            onChange={(e) => setMiddleName(e.target.value)}
-            placeholder="Отчество"
-          />
-          <input
-            label="Пароль"
-            variant="outlined"
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Пароль"
-            type={isShowPassword}
-          />
-        </form>
-        <div>
-          <span>Показать пароль </span>
-          <input
-            type="checkbox"
-            onChange={() => setShowPassword((prev) => !prev)}
-          />
-        </div>
-        <button onClick={registerRequest} className="login_button">
-          Регистрация
-        </button>
         <div>{error}</div>
       </div>
+      <button onClick={registerRequest} className="login_button">
+        Регистрация
+      </button>
     </div>
   );
 };
