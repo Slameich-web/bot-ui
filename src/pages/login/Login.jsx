@@ -4,7 +4,7 @@ import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import LoginInputs from "./components/LoginInputs";
 import LoginButtons from "./components/LoginButtons";
-import { Label } from "../../components/Label.tsx";
+import { Label } from "../../components/Label.jsx";
 export const Login = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");

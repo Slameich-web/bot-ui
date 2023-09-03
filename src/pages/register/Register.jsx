@@ -3,7 +3,7 @@ import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import RegInputs from "./components/RegInputs";
-import { Label } from "../../components/Label.tsx";
+import { Label } from "../../components/Label.jsx";
 export const Register = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
