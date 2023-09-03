@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import LoginInputs from "./components/LoginInputs";
 import LoginButtons from "./components/LoginButtons";
 import { Label } from "../../components/Label";
-import { useTelegram } from "../../useTelegram";
+import { useTelegram } from "../../utils/useTelegram";
 
 export const Login = () => {
   const [password, setPassword] = useState("");

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, memo } from "react";
 import Modal from "./components/Modal";
-import RevDropDown from "./components/RevDropDown";
-import Table from "./components/Table";
-import { useTelegram } from "../../useTelegram";
+import { RevDropDown } from "./components/RevDropDown";
+import { Table } from "./components/Table";
+import { useTelegram } from "../../utils/useTelegram";
 
-export const Revenue = () => {
+export const Revenue = memo(() => {
   const [showNavbar, setShowNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const { tg } = useTelegram();
@@ -25,7 +25,6 @@ export const Revenue = () => {
   }, []);
   return (
     <div className="revenue_wrapper">
-      {showModal ? <Modal setShowModal={setShowModal} /> : ""}
       <RevDropDown showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
       <div className="revenue_container">
         <div className="available_funds">
@@ -34,6 +33,7 @@ export const Revenue = () => {
         <Table tableName={"За прошедший месяц"} />
         <Table tableName={"За всё время"} />
       </div>
+      {showModal ? <Modal setShowModal={setShowModal} /> : ""}
     </div>
   );
-};
+});

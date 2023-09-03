@@ -4,7 +4,7 @@ import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import RegInputs from "./components/RegInputs";
 import { Label } from "../../components/Label";
-import { useTelegram } from "../../useTelegram";
+import { useTelegram } from "../../utils/useTelegram";
 
 export const Register = () => {
   const [password, setPassword] = useState("");

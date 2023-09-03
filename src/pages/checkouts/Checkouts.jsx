@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CheckoutsDropDown from "./components/CheckoutsDropDown";
 import CheckoutsTable from "./components/CheckoutsTable";
-import { useTelegram } from "../../useTelegram";
+import { useTelegram } from "../../utils/useTelegram";
 
 export const Checkouts = () => {
   const [showNavbar, setShowNavbar] = useState(false);

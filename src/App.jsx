@@ -6,8 +6,11 @@ import "./App.scss";
 import { Register } from "./pages/register/Register";
 import { Revenue } from "./pages/revenue/Revenue";
 import { Checkouts } from "./pages/checkouts/Checkouts";
-import { useTelegram } from "./useTelegram";
-import { ProtectedRoutes, ProtectedManagerRoutes } from "./ProtectedRoutes";
+import { useTelegram } from "./utils/useTelegram";
+import {
+  ProtectedRoutes,
+  ProtectedManagerRoutes,
+} from "./utils/ProtectedRoutes";
 const App = () => {
   const { tg } = useTelegram();
   // const getUser = async () => {
@@ -19,7 +22,7 @@ const App = () => {
   // };
   // useEffect(() => {
   //   getUser();
-  // }, [UserContext]);
+  // }, []);
   useEffect(() => {
     tg.ready();
     // eslint-disable-next-line react-hooks/exhaustive-deps
