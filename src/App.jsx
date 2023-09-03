@@ -31,6 +31,7 @@ const App = () => {
       <Link to="/register">register</Link>
       <Link to="/revenue">revenue</Link>
       <Link to="/checkouts">checkouts</Link>
+      <Link to="/aaa">prot</Link>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -38,7 +39,9 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/revenue" element={<Revenue />} />
           <Route path="/checkouts" element={<Checkouts />} />
-          <Route element={<ProtectedManagerRoutes />}></Route>
+          <Route element={<ProtectedManagerRoutes role="user" />}>
+            <Route path="/aaa" element={<div>prot</div>} />
+          </Route>
         </Route>
       </Routes>
     </>
