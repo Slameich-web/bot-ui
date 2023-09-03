@@ -3,7 +3,7 @@ import axios from "axios";
 import "../../App.scss";
 import { useNavigate } from "react-router-dom";
 import RegInputs from "./components/RegInputs";
-import { Label } from "../../components/Label.jsx";
+import { Label } from "../../components/Label";
 import { useTelegram } from "../../useTelegram";
 
 export const Register = () => {
