@@ -30,8 +30,9 @@ export const Login = () => {
     }
   };
   useEffect(() => {
+    tg.MainButton.show();
     tg.MainButton.setParams({
-      text: "Отправить данные",
+      text: "Войти",
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
