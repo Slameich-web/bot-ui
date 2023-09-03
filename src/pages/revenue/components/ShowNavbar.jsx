@@ -1,7 +1,7 @@
-import React, { memo } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-export const ShowNavbar = memo(({ showNavbar }) => {
+export const ShowNavbar = ({ showNavbar }) => {
   if (!showNavbar) {
     return undefined;
   }
@@ -21,4 +21,4 @@ export const ShowNavbar = memo(({ showNavbar }) => {
       <button>Запросить выплату</button>
     </Link>
   </div>;
-});
+};
