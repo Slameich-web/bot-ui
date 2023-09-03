@@ -585,4 +585,8 @@ body {
   justify-content: center;
   background-color: var(--tg-theme-secondary-bg-color);
   height: 50px;
+  .available_funds_num {
+    border-radius: 25%;
+    border: 1px solid var(--tg-theme-text-color);
+  }
 }
