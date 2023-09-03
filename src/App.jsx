@@ -7,7 +7,7 @@ import { Register } from "./pages/register/Register";
 import { Revenue } from "./pages/revenue/Revenue";
 import { Checkouts } from "./pages/checkouts/Checkouts";
 import { useTelegram } from "./useTelegram";
-
+import { ProtectedRoutes } from "./ProtectedRoutes";
 const App = () => {
   const { tg } = useTelegram();
 
@@ -23,11 +23,14 @@ const App = () => {
       <Link to="/revenue">revenue</Link>
       <Link to="/checkouts">checkouts</Link>
       <Routes>
-        <Route path="/home" element={<Home />} />
         <Route path="/" element={<Login />} />
+
         <Route path="/register" element={<Register />} />
-        <Route path="/revenue" element={<Revenue />} />
-        <Route path="/checkouts" element={<Checkouts />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/revenue" element={<Revenue />} />
+          <Route path="/checkouts" element={<Checkouts />} />
+        </Route>
       </Routes>
     </>
   );
