@@ -634,7 +634,6 @@ body {
 
 .text-field__input:focus {
   color: #212529;
-  border-color: #bdbdbd;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
 }
@@ -662,8 +661,6 @@ body {
   transform: translateY(-50%);
   pointer-events: none;
   border: none;
-  background-color: #fff;
-  color: #757575;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
