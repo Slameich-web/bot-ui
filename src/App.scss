@@ -611,7 +611,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #bdbdbd;
   border-radius: 0.25rem;
@@ -635,7 +634,6 @@ body {
 
 .text-field__input:focus {
   color: #212529;
-  background-color: #fff;
   border-color: #bdbdbd;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
@@ -643,7 +641,6 @@ body {
 
 .text-field__input:disabled,
 .text-field__input[readonly] {
-  background-color: #f5f5f5;
   opacity: 1;
 }
 
