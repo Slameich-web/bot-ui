@@ -13,7 +13,7 @@ export const RegInputs = memo(
   }) => {
     return (
       <div className="reg_input_container">
-        <div className="text-field text-field_floating-2 input_with_button">
+        <div className="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             type="email"
@@ -26,7 +26,7 @@ export const RegInputs = memo(
             Email
           </label>
         </div>
-        <div className="text-field text-field_floating-2 input_with_button">
+        <div className="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             type="text"
@@ -39,7 +39,7 @@ export const RegInputs = memo(
             Имя
           </label>
         </div>
-        <div className="text-field text-field_floating-2 input_with_button">
+        <div className="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             type="text"
@@ -52,7 +52,7 @@ export const RegInputs = memo(
             Фамилия
           </label>
         </div>
-        <div className="text-field text-field_floating-2 input_with_button">
+        <div className="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             type="text"
@@ -65,7 +65,7 @@ export const RegInputs = memo(
             Отчество
           </label>
         </div>
-        <div className="text-field text-field_floating-2 input_with_button">
+        <div className="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             label="Пароль"

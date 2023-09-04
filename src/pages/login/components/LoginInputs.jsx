@@ -4,7 +4,7 @@ export const LoginInputs = memo(
   ({ setEmail, setPassword, isShowPassword, setShowPassword }) => {
     return (
       <div className="login_input_container">
-        <div class="text-field text-field_floating-2 input_with_button">
+        <div class="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             type="email"
@@ -16,7 +16,7 @@ export const LoginInputs = memo(
             Email
           </label>
         </div>
-        <div className="text-field text-field_floating-2 input_with_button">
+        <div className="text-field text-field_floating input_with_button">
           <input
             class="text-field__input"
             label="Пароль"
