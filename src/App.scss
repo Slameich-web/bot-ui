@@ -122,7 +122,8 @@ body {
     width: 70%;
     background: transparent;
     border: 0;
-    background-color: var(--tg-theme-secondary-bg-color);
+    //background-color: var(--tg-theme-secondary-bg-color);
+    background-color: red;
     color: var(--tg-theme-button-color);
     border-radius: 4px;
     margin: 4px 0;
@@ -537,7 +538,7 @@ body {
 }
 .input_with_button {
   position: relative;
-  width: 80%;
+  width: 100%;
   input {
     width: 100%;
     height: 40px;
@@ -595,7 +596,7 @@ body {
   position: relative;
 }
 .text-field_floating .text-field__input {
-  height: calc(3.5rem + 2px);
+  height: calc(2rem + 4px);
   line-height: 1.25;
   padding: 1rem 0.75rem;
 }
@@ -618,7 +619,6 @@ body {
 }
 .text-field_floating .text-field__input:focus,
 .text-field_floating .text-field__input:not(:placeholder-shown) {
-  padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
 .text-field_floating .text-field__input:focus ~ .text-field__label,
