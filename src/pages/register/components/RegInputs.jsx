@@ -13,14 +13,19 @@ export const RegInputs = memo(
   }) => {
     return (
       <div className="reg_input_container">
-        <input
-          className="auth_input"
-          label="Email"
-          variant="outlined"
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          type="email"
-        />
+        <div className="text-field text-field_floating-2 input_with_button">
+          <input
+            className="auth_input"
+            label="Email"
+            variant="outlined"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder=""
+            type="email"
+          />
+          <label class="text-field__label" for="password">
+            Email
+          </label>
+        </div>
 
         <input
           className="auth_input"
