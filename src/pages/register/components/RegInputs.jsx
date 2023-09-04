@@ -12,7 +12,7 @@ export const RegInputs = memo(
     setShowPassword,
   }) => {
     return (
-      <div className="reg_input_container">
+      <div className="login_input_container">
         <div className="text-field text-field_floating-2 input_with_button">
           <input
             className="auth_input"
