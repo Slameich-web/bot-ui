@@ -26,36 +26,57 @@ export const RegInputs = memo(
             Email
           </label>
         </div>
-
-        <input
-          className="auth_input"
-          label="Имя"
-          variant="outlined"
-          onChange={(e) => setFirstName(e.target.value)}
-          placeholder="Имя"
-        />
-        <input
-          className="input_color"
-          label="Фамилия"
-          variant="outlined"
-          onChange={(e) => setLastName(e.target.value)}
-          placeholder="Фамилия"
-        />
-        <input
-          className="input_color"
-          label="Отчество"
-          variant="outlined"
-          onChange={(e) => setMiddleName(e.target.value)}
-          placeholder="Отчество"
-        />
-        <div className="reg_input_with_button">
+        <div className="text-field text-field_floating-2 input_with_button">
           <input
+            class="text-field__input"
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder=""
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <label class="text-field__label" for="firstname">
+            Имя
+          </label>
+        </div>
+        <div className="text-field text-field_floating-2 input_with_button">
+          <input
+            class="text-field__input"
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder=""
+            onChange={(e) => setLastName(e.target.value)}
+          />
+          <label class="text-field__label" for="lastname">
+            Фамилия
+          </label>
+        </div>
+        <div className="text-field text-field_floating-2 input_with_button">
+          <input
+            class="text-field__input"
+            type="text"
+            id="middlename"
+            name="middlename"
+            placeholder=""
+            onChange={(e) => setMiddleName(e.target.value)}
+          />
+          <label class="text-field__label" for="middlename">
+            Отчество
+          </label>
+        </div>
+        <div className="text-field text-field_floating-2 input_with_button">
+          <input
+            class="text-field__input"
             label="Пароль"
-            variant="outlined"
+            id="password"
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Пароль"
+            placeholder=""
             type={isShowPassword}
           />
+          <label class="text-field__label" for="password">
+            Пароль
+          </label>
           <VisibilityIcon className="show_button" onClick={setShowPassword} />
         </div>
       </div>
