@@ -10,7 +10,7 @@ export const LoginInputs = memo(
             type="email"
             id="email"
             name="email"
-            placeholder="email"
+            placeholder=""
           />
           <label class="text-field__label" for="email">
             Email
@@ -22,7 +22,7 @@ export const LoginInputs = memo(
             label="Пароль"
             id="password"
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Пароль"
+            placeholder=""
             type={isShowPassword}
           />
           <label class="text-field__label" for="password">
