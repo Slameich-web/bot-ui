@@ -33,7 +33,13 @@ export const Revenue = memo(() => {
         </div>
         <Table tableName={"За прошедший месяц"} />
         <Table tableName={"За всё время"} />
-        <DataTable headings={["aaaa", "aaaaasss"]} />
+        <DataTable
+          headings={["aaaa", "aaaaasss"]}
+          data={[
+            ["asdsd", "aasdasdd"],
+            ["qqqqqqqqqq", "ffffffff"],
+          ]}
+        />
       </div>
       {showModal ? <Modal setShowModal={setShowModal} /> : ""}
     </div>
