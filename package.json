@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development webpack serve --mode=development --open --config config/webpack.config.js",
-    "prod": "NODE_ENV=production webpack serve --mode=production --config config/webpack.config.js",
+    "prod": "webpack serve --mode=production --config config/webpack.config.js",
     "build": "webpack --config config/webpack.config.js"
   },
   "repository": {
