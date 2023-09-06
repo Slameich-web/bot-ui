@@ -1,1 +1,0 @@
-export {Incomes} from "./Incomes"
