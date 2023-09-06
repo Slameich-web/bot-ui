@@ -1,0 +1,83 @@
+.page {
+
+}
+
+.incomeStats {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 1em;
+
+    background-color: var(--linear-menu-bg);
+}
+
+.tableName {
+    display: flex;
+
+    justify-content: center;
+
+    padding: 1em;
+
+    background-color: color-mix(in hsl, var(--hint_color), #25303E);
+}
+
+.wrapper {
+    width: 100% !important;
+    overflow-x: auto;
+}
+
+.table {
+    display: grid;
+
+    white-space: nowrap;
+
+    border-collapse: collapse;
+}
+
+.heading, .cell {
+    min-width: 50px;
+}
+
+.heading {
+
+}
+
+.row {
+    display: grid;
+
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+.cell > span,
+.cell > a {
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+}
+
+.cell,
+.heading {
+    display: flex;
+
+    justify-content: center;
+
+    border-right: solid 3px color-mix(in hsl, var(--hint_color), #080a0c);
+    border-bottom: solid 3px var(--bg_color);
+
+    padding: 1.5em 1em;
+}
+
+
+.cell {
+    background-color: var(--hint_color);
+}
+
+.heading {
+    background-color: color-mix(in hsl, var(--hint_color), #2d3c4b);
+}
+
+.cell:first-child {
+    background-color: color-mix(in hsl, var(--hint_color), #2d3c4b);
+}

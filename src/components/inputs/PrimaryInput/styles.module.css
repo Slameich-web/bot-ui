@@ -1,0 +1,73 @@
+.container {
+
+}
+
+.group {
+    display: block;
+
+    background-color: var(--secondary_bg_color);
+
+    padding: 1em 1em 1em;
+
+    border-radius: .5em;
+
+    position: relative;
+
+    transition: padding-top 150ms ease-in-out;
+}
+
+.label {
+    position: absolute;
+
+    font-size: .85em;
+
+    color: var(--hint_color);
+
+    transition: top 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+.group:has(.input:focus) .label,
+.group:has(.input:not(:placeholder-shown)) .label {
+    top: 1em;
+
+    color: var(--text_color);
+}
+
+.input {
+    display: flex;
+
+    align-items: center;
+
+    appearance: none;
+
+    border: none;
+
+    background-color: transparent;
+
+    width: 100%;
+
+    color: var(--text_color);
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: transparent;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+    -webkit-text-fill-color: var(--text_color) !important;
+}
+
+.group:has(.input:focus),
+.group:has(.input:not(:placeholder-shown)) {
+    padding: 2em 1em 1em;
+    outline: solid 1px var(--hint_color);
+}

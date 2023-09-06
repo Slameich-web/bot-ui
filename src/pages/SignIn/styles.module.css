@@ -1,0 +1,23 @@
+.page {
+
+}
+
+.title {
+    text-align: center;
+}
+
+.form {
+    display: grid;
+
+    gap: 1em;
+
+    padding: 3em 1em;
+
+    background-color: color-mix(in hsl, var(--bg_color), #111B25);
+}
+
+.submitButton {
+    display: flex;
+
+    justify-content: center;
+}

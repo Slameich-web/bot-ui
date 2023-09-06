@@ -1,0 +1,43 @@
+.wrapper {
+    width: 100% !important;
+    overflow-x: auto;
+}
+
+.table {
+    display: grid;
+
+    white-space: nowrap;
+
+    border-collapse: collapse;
+}
+
+.heading, .cell {
+    min-width: 0;
+}
+
+.heading {
+
+}
+
+.row {
+    display: grid;
+
+    grid-auto-flow: column;
+}
+
+.header > .row {
+    grid-auto-columns: 20ch;
+}
+
+.cell > span,
+.cell > a {
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+}
+
+.cell {
+    display: flex;
+
+    justify-content: center;
+}
