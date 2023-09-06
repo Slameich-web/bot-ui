@@ -3,6 +3,7 @@ import { Modal } from "./components/Modal";
 import { RevDropDown } from "./components/RevDropDown";
 import { Table } from "./components/Table";
 import { useTelegram } from "../../utils/useTelegram";
+import { DataTable } from "./components/Table";
 
 export const Revenue = memo(() => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -32,6 +33,7 @@ export const Revenue = memo(() => {
         </div>
         <Table tableName={"За прошедший месяц"} />
         <Table tableName={"За всё время"} />
+        <DataTable headings={["aaaa", "aaaaasss"]} />
       </div>
       {showModal ? <Modal setShowModal={setShowModal} /> : ""}
     </div>
